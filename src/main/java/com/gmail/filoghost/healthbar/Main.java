@@ -4,7 +4,6 @@ import java.io.File;
 import java.util.logging.Logger;
 
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -66,20 +65,6 @@ public class Main extends JavaPlugin {
 		
 		//other files
 		reloadConfigFromDisk();
-		FileConfiguration config = getConfig();
-		
-		
-		//try to check updates
-		Updater.UpdaterHandler.setup(this, 54447, "§2[§aHealthBar§2] ", super.getFile(), ChatColor.GREEN, "/hbr update", "health-bar");
-		
-		if (config.getBoolean("update-notification")) {
-			Thread updaterThread = new Thread(new Runnable() { public void run() {
-				Updater.UpdaterHandler.startupUpdateCheck();
-			}});
-			
-			updaterThread.start();
-		}
-		
 			
 		//setup for command executor
 		getCommand("healthbar").setExecutor(new Commands(this));
@@ -131,5 +116,4 @@ public class Main extends JavaPlugin {
 		return plugin.getFile();
 	}
 
-//end of the class
 }

@@ -56,7 +56,6 @@ public class Configuration {
 		
 		FIX_TAB_NAMES("fix-tab-names", true),
 		FIX_DEATH_MESSAGES("fix-death-messages", true),
-		UPDATE_NOTIFICATION("update-notification", true),
 		USE_PLAYER_PERMISSIONS("use-player-bar-permissions", false),
 		OVERRIDE_OTHER_SCOREBOARD("override-other-scoreboard", false);
 		

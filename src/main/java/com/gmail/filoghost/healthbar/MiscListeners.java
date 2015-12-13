@@ -179,10 +179,7 @@ public class MiscListeners implements Listener {
 		//update the health bars
 		scheduler.scheduleSyncDelayedTask(instance, new Runnable() { public void run() {
 				updatePlayer(p);
-		}}, 1L);
-		
-		//update notifications
-		Updater.UpdaterHandler.notifyIfUpdateWasFound(p, "healthbar.update");		
+		}}, 1L);	
 	}	
 	
 	@EventHandler (ignoreCancelled = true, priority = EventPriority.HIGH)

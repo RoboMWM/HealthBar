@@ -30,21 +30,6 @@ public class Commands implements CommandExecutor {
 				return true;
 			}
 			
-			if (args[0].equalsIgnoreCase("update")) {
-				
-				if (!sender.hasPermission("healthbar.update")) {
-					noPermissionMessage(sender);
-					return true;
-				}
-				
-				Thread updaterThread = new Thread(new Runnable() { public void run() {
-					Updater.UpdaterHandler.manuallyCheckUpdates(sender);
-				}});
-				updaterThread.start();
-
-				return true;
-			}
-			
 	    	sender.sendMessage(PREFIX + "§eUnknown command. Type §a" + label + " §efor help.");
 	    	return true;
 	}
@@ -81,7 +66,6 @@ public class Commands implements CommandExecutor {
 		sender.sendMessage("§e>>§6 HealthBar commands: ");
 		sender.sendMessage("§2/hbr §7- §aDisplays general plugin info");
 		sender.sendMessage("§2/hbr reload §7- §aReloads the configs");
-		sender.sendMessage("§2/hbr update §7- §aChecks for updates");
 	}
 
 	private void noPermissionMessage(CommandSender sender) {
