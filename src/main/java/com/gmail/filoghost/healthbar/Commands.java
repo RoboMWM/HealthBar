@@ -52,7 +52,7 @@ public class Commands implements CommandExecutor {
     private void sendInfo(CommandSender sender) {
         sender.sendMessage(PREFIX);
         sender.sendMessage("§aVersion: §7" + instance.getDescription().getVersion());
-        sender.sendMessage("§aDeveloper: §7filoghost");
+        sender.sendMessage("§aDevelopers: §7filoghost§r, §7electronrussia");
         sender.sendMessage("§aCommands: §7/hbr help");
     }
 
