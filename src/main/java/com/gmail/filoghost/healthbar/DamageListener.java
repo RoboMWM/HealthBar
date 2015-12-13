@@ -51,9 +51,6 @@ public class DamageListener implements Listener {
     private static long playerHideDelay;
     private static boolean playerUseAfter;
 
-    //hooks and instances of other plugins
-    private static boolean hookEpicboss;
-
     private static Map<String, String> localeMap = new HashMap<>();
     private static Map<String, Integer> playerTable = new HashMap<>();
     private static Map<Integer, Integer> mobTable = new HashMap<>();
@@ -448,21 +445,6 @@ public class DamageListener implements Listener {
         }
 
         playerUseAfter = config.getBoolean(Configuration.Nodes.PLAYERS_AFTER_ENABLE.getNode());
-
-        //setup for epicboss
-        hookEpicboss = config.getBoolean(Configuration.Nodes.HOOKS_EPIBOSS.getNode());
-
-        if (hookEpicboss) {
-            if (!Bukkit.getPluginManager().isPluginEnabled("EpicBoss Gold Edition")) {
-                //if epicboss is not loaded, disable hook
-                hookEpicboss = false;
-                Bukkit.getConsoleSender().sendMessage("§a[HealthBar] §fCould not find plugin EpicBoss Gold Edition, "
-                        + "check that you have installed it and it's correctly loaded. If not, set 'hooks, epicboss: false' in the configs. "
-                        + "If you think that is an error, contact the developer.");
-            } else {
-                Main.logger.info("Hooked plugin EpicBoss Gold Edition.");
-            }
-        }
 
         //setup for eventual custom text, not to run extra checks while plugin is running
         if (mobCustomText.contains("{name}")) {

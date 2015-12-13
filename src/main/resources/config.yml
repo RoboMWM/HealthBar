@@ -36,8 +36,6 @@ mob-bars:
   disabled-worlds: world_nether,world_the_end
   type-disabling: false
   disabled-types: creeper,zombie,skeleton,iron_golem
-hooks:
-  epicboss: false
 fix-tab-names: true
 fix-death-messages: true
 use-player-bar-permissions: false

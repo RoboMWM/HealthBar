@@ -48,7 +48,6 @@ public class Configuration {
         MOB_DISABLED_WORLDS("mob-bars.disabled-worlds", "world_nether,world_the_end"),
         MOB_TYPE_DISABLING("mob-bars.type-disabling", false),
         MOB_DISABLED_TYPES("mob-bars.disabled-types", "creeper,zombie,skeleton,iron_golem"),
-        HOOKS_EPIBOSS("hooks.epicboss", false),
         FIX_TAB_NAMES("fix-tab-names", true),
         FIX_DEATH_MESSAGES("fix-death-messages", true),
         USE_PLAYER_PERMISSIONS("use-player-bar-permissions", false),
